@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>@ViewData["Title"] - MLHackathonServer</title>
+
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+
+  <!-- Main font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icons. Uncomment required icon fonts -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css"> -->
+  <link rel="stylesheet" href="~/assets/vendor/fonts/ionicons.css">
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css"> -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css"> -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css"> -->
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="~/assets/vendor/css/bootstrap.css">
+  <link rel="stylesheet" href="~/assets/vendor/css/appwork.css">
+  <link rel="stylesheet" href="~/assets/vendor/css/theme-corporate.css">
+  <link rel="stylesheet" href="~/assets/vendor/css/colors.css">
+  <link rel="stylesheet" href="~/assets/vendor/css/uikit.css">
+
+  <!-- Layout helpers -->
+  <script src="~/assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Libs -->
+
+  <!-- `perfect-scrollbar` library required by SideNav plugin -->
+  <link rel="stylesheet" href="~/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/dist/site.css" asp-append-version="true" />
+    </environment>
+</head>
+
+<body>
+
+     <!-- Layout navbar -->
+                <nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-dark text-white container-p-x"
+                    id="layout-navbar">
+                    <a href="/" class="navbar-brand">MLHackathonServer</a>
+
+
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <partial name="_LoginPartial" />
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Hakkimizda"
+                                    asp-action="Index">About Us</a>
+                            </li>
+                        </ul>
+                 </div>
+
+                </nav>
+
+  @RenderBody()
+
+
+  <!-- Footer -->
+
+  <footer class="footer bg-dark pt-4">
+    <div class="container text-center py-4">
+      <div class="pb-3">
+        <a href="javascript:void(0)" class="footer-text text-large font-weight-normal">MLHackathonServer</a> <span
+          class="align-top">©</span>
+      </div>
+      <hr class="mb-4">
+      <div class="row">
+        <div class="col-sm pb-4">
+          <div class="footer-text small font-weight-bold mb-3">ABOUT US</div>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">About</a>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">Our Story</a>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">Shipping</a>
+        </div>
+        <div class="col-sm pb-4">
+          <div class="footer-text small font-weight-bold mb-3">SUPPORT</div>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">FAQ</a>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">Support</a>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">Consultant</a>
+        </div>
+        <div class="col-sm pb-4">
+          <div class="footer-text small font-weight-bold mb-3">PARTNERS</div>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">Wholesale</a>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">Office solutions</a>
+          <a href="javascript:void(0)" class="footer-link d-block pb-2">Press Resource</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="layout-overlay layout-sidenav-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+
+    <script src="~/dist/vendor.js" asp-append-version="true"></script>
+
+  <!-- Core scripts -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="~/assets/vendor/libs/popper/popper.js"></script>
+  <script src="~/assets/vendor/js/bootstrap.js"></script>
+  <script src="~/assets/vendor/js/sidenav.js"></script>
+
+  <!-- Libs -->
+
+  <!-- `perfect-scrollbar` library required by SideNav plugin -->
+  <script src="~/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <!-- Main script -->
+
+  <script src="~/assets/js/main.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
