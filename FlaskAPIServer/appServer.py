@@ -101,7 +101,6 @@ def olumluYorumlar():
         theWriter.writeheader();
         for word in yorumlar:
             theWriter.writerow({'Yorum' : word , 'Duygu' : 1})
-        yorumlar =[]
             
        
        
@@ -114,6 +113,8 @@ def olumluYorumlar():
 def olumsuzyorumlar():
     pageCount =1
     yorumlar=[]
+    yorumlar2=[]
+
   #  imdbUrl =request.args.get('link', default = 1, type = str)
    # imdbUrl='https://www.hepsiburada.com/hometech-alfa-110a-intel-atom-z3735f-2gb-32gb-emmc-windows-10-home-11-6-fhd-tasinabilir-bilgisayar-p-HBV00000BEEWD'
     link = request.args.get('link', default = '*', type = str)
@@ -129,6 +130,7 @@ def olumsuzyorumlar():
         for film in gelen_veri:
             yorumlar.append(film.text)
 
+
         pageCount+=1
        
         link =""
@@ -141,6 +143,7 @@ def olumsuzyorumlar():
     with open('urlDataOlumsuz.csv','w',newline='',encoding='utf-16') as f:
         fieldname=['Yorum','Duygu']
         theWriter = csv.DictWriter(f,fieldnames=fieldname)
+        yorumlar2 = yorumlar
         
         
         theWriter.writeheader();
@@ -148,7 +151,7 @@ def olumsuzyorumlar():
             theWriter.writerow({'Yorum' : word , 'Duygu' : 0})
         yorumlar =[]
 
-    return jsonify(yorumlar) 
+    return jsonify(yorumlar2) 
 
 if __name__ == '__main__':
 
