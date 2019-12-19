@@ -22,10 +22,12 @@ def yorumlar():
         try:
         
             json_ = request.form['data']
-            print("aa:"+json.dumps(json_)+"\n")
+            
+            yorum = request.args.get('link', default = '*', type = str)
+            print("aa:"+json.dumps(yorum)+"\n")
             #query = pd.get_dummies(pd.DataFrame(json_))
 
-            prediction = model.predict([json_])
+            prediction = model.predict([yorum])
 
             resp = jsonify({'prediction': str(prediction)})
             # response = app.response_class(response=json.dumps(prediction),mimetype='application/json')
@@ -53,8 +55,7 @@ def yorumlar():
 
 
 if __name__ == '__main__':
-    
 
-	model = joblib.load("latest_model.pkl")  # Load "model.pkl"
+	model = joblib.load("latest_model.pkl")# Load "model.pkl"
 	print('Model loaded')
 app.run(debug=True)
