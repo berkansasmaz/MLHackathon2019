@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  import service from "service/MLHackathonServer";
+  import router from "@/router";
 export default {
 	props: {
 		title: {
@@ -12,7 +14,7 @@ export default {
 			"type" : String
 		},
 		prefix: {
-			"default": "ZobooEdu",
+			"default": "MLHackathon",
 			"type" : String
 		},
 		icon: {

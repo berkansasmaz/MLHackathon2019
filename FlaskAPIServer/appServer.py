@@ -1,4 +1,3 @@
-# Dependencies
 from flask import Flask, request, jsonify, render_template, make_response
 from sklearn.externals import joblib
 import traceback

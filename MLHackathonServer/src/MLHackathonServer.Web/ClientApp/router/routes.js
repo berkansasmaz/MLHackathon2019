@@ -1,4 +1,5 @@
 import HomePage from 'components/pages/home-page'
+import Comment from 'components/pages/comment'
 import Forbidden from 'components/root/forbidden';
 
 export const routes = [
@@ -9,6 +10,13 @@ export const routes = [
 	   display: 'Home', 
 	   icon: 'home' 
 	},
+	{
+		name: 'comment',
+		path: '/comment', 
+		component: Comment, 
+		display: 'Comment', 
+		icon: 'pen' 
+	 },
 	{
 		divider: true,
 		path: ''
