@@ -8,9 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using System;
 using MLHackathonServer.Entity;
+using Microsoft.AspNetCore.Authorization;
+using System.Threading.Tasks;
 
 namespace MLHackathonServer.Web {
     public class Startup {
+
         public Startup(IConfiguration configuration) {
             Configuration = configuration;
         }
@@ -26,9 +29,11 @@ namespace MLHackathonServer.Web {
             );
 
             services
-                .AddDefaultIdentity < MLUser > ()
+                .AddDefaultIdentity <MLUser> ()
+				.AddRoles<MLUserRole>()
                 .AddEntityFrameworkStores < MLDBContext > ()
                 .AddDefaultTokenProviders();
+
 
             // Add framework services.
             services.AddMvc()
@@ -69,7 +74,7 @@ namespace MLHackathonServer.Web {
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider services) {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
 
@@ -100,6 +105,7 @@ namespace MLHackathonServer.Web {
                         controller = "Home", action = "Index"
                     });
             });
+			
         }
     }
 }

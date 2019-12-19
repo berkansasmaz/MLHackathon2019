@@ -74,7 +74,7 @@ def olumluYorumlar():
     link  = link + "-yorumlari?filtre=5&sayfa=" +str(pageCount)
     r = requests.get(link)
     soup = BeautifulSoup(r.content,"html.parser")
-    gelen_veri2 = soup.find("div",{"class":"pagination"}).find("ul").find_all("li")[-1].find("span").text
+    gelen_veri2 = soup.find("div",{"class":"pagination"}).find("ul").find_all("li")[-1].find("a").text
     sayi = int(gelen_veri2)
 
     while pageCount<sayi:

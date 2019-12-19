@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MLHackathonServer.Entity
 {
-    public class MLDBContext : IdentityDbContext<MLUser, IdentityRole<Guid>, Guid>
+    public class MLDBContext : IdentityDbContext<MLUser, MLUserRole, Guid>
     {
                 public MLDBContext(DbContextOptions options) : base(options)
         {
