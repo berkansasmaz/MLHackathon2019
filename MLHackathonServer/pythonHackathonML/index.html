@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spam Detection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <div class="container" id="">
+        <nav class="nav nav-tabs ">
+            <a class="nav-item nav-link active" href="#">Active</a>
+            <a class="nav-item nav-link" href="#">Much longer nav link</a>
+            <a class="nav-item nav-link" href="#">Link</a>
+        </nav>
+
+        <section>
+            <div class="row">
+                <div class="col-md-8">
+                    <div>
+                        <h4>E-posta mesajı girin</h4>
+
+                    </div>
+                    <form action="{{ url_for('predict')}}" method="post">
+                        <div>
+                            <textarea name="data" id="data" cols="60" rows="10"></textarea>
+
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary  ">Analiz</button>
+
+                        </div>
+                    </form>
+
+
+
+                </div>
+                <div class="col-md-4">
+                    <h4>E-posta Analiz Sonucu</h4>
+                    <div>
+                    <h3>{{predict}}</h3>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
