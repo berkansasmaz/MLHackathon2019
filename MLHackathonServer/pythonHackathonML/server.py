@@ -18,25 +18,29 @@ def home():
 
 @app.route('/predict', methods=['Post'])
 def yorumlar():
-    if model:
-        try:
+    yorum = request.args.get('link', default = '*', type = str)
+   
         
-            json_ = request.form['data']
+    if model:
+        
+        #json_ = request.form['data']
+        print(yorum)
+
+       
+        
+        print("aa:"+json.dumps(json_)+"\n")
+        #query = pd.get_dummies(pd.DataFrame(json_))
+
+        prediction = model.predict([yorum])
+
+        resp = jsonify({'prediction': str(prediction)})
+        # response = app.response_class(response=json.dumps(prediction),mimetype='application/json')
+     
+        print(prediction)
+        return str(prediction)
+        
             
-            yorum = request.args.get('link', default = '*', type = str)
-            print("aa:"+json.dumps(yorum)+"\n")
-            #query = pd.get_dummies(pd.DataFrame(json_))
-
-            prediction = model.predict([yorum])
-
-            resp = jsonify({'prediction': str(prediction)})
-            # response = app.response_class(response=json.dumps(prediction),mimetype='application/json')
-            a = 4
-            print(prediction)
-            return str(prediction)
-        except:
-               return jsonify({'trace': traceback.format_exc()})
-
+       
     
   #  imdbUrl =request.args.get('link', default = 1, type = str)
    # imdbUrl='https://www.hepsiburada.com/hometech-alfa-110a-intel-atom-z3735f-2gb-32gb-emmc-windows-10-home-11-6-fhd-tasinabilir-bilgisayar-p-HBV00000BEEWD'
