@@ -23,17 +23,20 @@ def yorumlar():
         
     if model:
         
-        #json_ = request.form['data']
+        yorum = request.args.get('link', default = '*', type = str)
+   
+        
+    if model:
+        
+        json_ = request.form['link']
         print(yorum)
 
-       
-        
-        print("aa:"+json.dumps(json_)+"\n")
+        #print("aa:"+json.dumps(json_)+"\n")
         #query = pd.get_dummies(pd.DataFrame(json_))
 
-        prediction = model.predict([yorum])
+        prediction = model.predict([json_])
 
-        resp = jsonify({'prediction': str(prediction)})
+        #resp = jsonify({'prediction': str(prediction)})
         # response = app.response_class(response=json.dumps(prediction),mimetype='application/json')
      
         print(prediction)
