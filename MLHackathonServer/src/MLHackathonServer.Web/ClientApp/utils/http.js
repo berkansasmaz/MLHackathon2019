@@ -7,8 +7,11 @@ export const http = axios.create({
     "Content-Type": "application/json",
     "X-Requested-With": "XMLHttpRequest",
 	"X-Application-Name": "vue",
+
   }
 });
+
+
 
 http.interceptors.response.use(
   function (response) {

@@ -20,6 +20,16 @@ import {
 		  console.error(result.error);
 		  throw result.error;
 		}
+	  },
+	  async predict(link) {
+		var result = await http.post("http://127.0.0.1:5000/predict?link=" +  link);
+		
+		if (result.status === 200) {
+		  return result.data;
+		} else {
+		  console.error(result.error);
+		  throw result.error;
+		}
 	  }
   }
   
