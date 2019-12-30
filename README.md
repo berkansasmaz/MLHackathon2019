@@ -1,6 +1,26 @@
 ## Purpose
 
-<b>ML Hackathon </b>: Projemiz https://www.hepsiburada.com/ üzerinden ürün bazlı yorumları olumlu ve olumsuz olarak filtreleyip bunları csv uzantılı dosyaya kaydeder. Bu cvs dosyası ile makine öğrenmesi modelini oluşturuyoruz. Oluşan modelimizi flask ile servis haline getirdik. Bu sayede web sitemizde girilen bir metnin duygu analizini gerçekleştirebiliyoruz.<br>
+<b>ML Hackathon</b>:
+
+SOA: Bir html sayfasından veri (text) çekme servisi
+
+ 
+
+ML: Türkçe Sentiment (Duygu) Analizi yapabilecek şekilde doğal dil işleme adımlarına bakılacaktır.
+
+*        Verinin toplanması
+*         Verinin olumlu/olumsuz şeklinde ayrılması, taglenmesi
+*         Gereksiz karakterlerin atılması (Veri ön işleme)
+*         Verinin makine öğrenmesi algoritmalarının kullanılacağı hale getirilmesi (textin vektörlere/matrislere dönüştürülmesi)
+
+*         Başarımı en yüksek modelin bulunması için denemeler yapılması
+
+*        Modelin oluşturulması (pkl / pickle)
+
+
+IWP: Veri girişi sağlanacak html sayfalarının tasarımı
+
+Veritabanı: Gerekli kullanıcı tablolarının tasarımı
 
 # Table of Contents
 
