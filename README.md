@@ -40,7 +40,8 @@
 * Net Core 2.2
 * NodeJS >= 10.x
 * Python 3.x
-* VSCode (ideally), or VS2017
+* VSCode (ideally)
+* Anaconda3 (ideally)
 
 ## Installation
 
