@@ -12,10 +12,8 @@
          Verinin olumlu/olumsuz şeklinde ayrılması, taglenmesi
          Gereksiz karakterlerin atılması (Veri ön işleme)
          Verinin makine öğrenmesi algoritmalarının kullanılacağı hale getirilmesi (textin vektörlere/matrislere dönüştürülmesi)
-
          Başarımı en yüksek modelin bulunması için denemeler yapılması
-
-        Modelin oluşturulması (pkl / pickle)
+         Modelin oluşturulması (pkl / pickle)
 
 
 * <b>IWP:</b> Veri girişi sağlanacak html sayfalarının tasarımı
