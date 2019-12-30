@@ -2,25 +2,25 @@
 
 <b>ML Hackathon</b>:
 
-SOA: Bir html sayfasından veri (text) çekme servisi
+* <b>SOA:</b> Bir html sayfasından veri (text) çekme servisi
 
  
 
-ML: Türkçe Sentiment (Duygu) Analizi yapabilecek şekilde doğal dil işleme adımlarına bakılacaktır.
+* <b>ML:</b> Türkçe Sentiment (Duygu) Analizi yapabilecek şekilde doğal dil işleme adımlarına bakılacaktır.
 
-*        Verinin toplanması
-*         Verinin olumlu/olumsuz şeklinde ayrılması, taglenmesi
-*         Gereksiz karakterlerin atılması (Veri ön işleme)
-*         Verinin makine öğrenmesi algoritmalarının kullanılacağı hale getirilmesi (textin vektörlere/matrislere dönüştürülmesi)
+         Verinin toplanması
+         Verinin olumlu/olumsuz şeklinde ayrılması, taglenmesi
+         Gereksiz karakterlerin atılması (Veri ön işleme)
+         Verinin makine öğrenmesi algoritmalarının kullanılacağı hale getirilmesi (textin vektörlere/matrislere dönüştürülmesi)
 
-*         Başarımı en yüksek modelin bulunması için denemeler yapılması
+         Başarımı en yüksek modelin bulunması için denemeler yapılması
 
-*        Modelin oluşturulması (pkl / pickle)
+        Modelin oluşturulması (pkl / pickle)
 
 
-IWP: Veri girişi sağlanacak html sayfalarının tasarımı
+* <b>IWP:</b> Veri girişi sağlanacak html sayfalarının tasarımı
 
-Veritabanı: Gerekli kullanıcı tablolarının tasarımı
+* <b>Veritabanı:</b> Gerekli kullanıcı tablolarının tasarımı
 
 # Table of Contents
 
