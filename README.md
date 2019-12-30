@@ -41,7 +41,7 @@
 * NodeJS >= 10.x
 * Python 3.x
 * VSCode (ideally)
-* Anaconda3 (ideally)
+* Anaconda (ideally)
 
 ## Installation
 
