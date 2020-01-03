@@ -16,7 +16,7 @@
          Modelin oluşturulması (pkl / pickle)
 
 
-* <b>IWP:</b> Veri girişi sağlanacak html sayfalarının tasarımı
+* <b>IWP:</b> Veri girişi sağlanacak HTML sayfalarının tasarımı
 
 * <b>Veritabanı:</b> Gerekli kullanıcı tablolarının tasarımı
 
