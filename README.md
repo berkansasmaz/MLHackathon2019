@@ -2,7 +2,7 @@
 
 <b>ML Hackathon</b>:
 
-* <b>SOA:</b> Bir html sayfasından veri (text) çekme servisi
+* <b>SOA:</b> Bir HTML sayfasından veri (text) çekme servisi
 
  
 
